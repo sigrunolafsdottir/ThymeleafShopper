@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="allCapitals" th:unless="${#lists.isEmpty(allCustomers)}">
+    <h2 th:text="${customerTitle}"></h2>
+    <table>
+        <tbody>
+        <tr th:each="cus : ${allCustomers}">
+            <td th:text="${cus.name}"></td>
+            <td th:text="${cus.adress}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+</body>
+</html>
